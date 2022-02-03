@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+
+.slideshow-container {
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+    background-image: url(../assets/images/background-img.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 50%;
+}
+
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: relative;
+    width: 75%;
+    height: 40rem;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+    margin: 0 auto;
+}
+.cb-slideshow:after { 
+    content: '';
+    /* background: transparent url(../images/pattern.png) repeat top left;  */
+}
+
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 48s linear infinite 0s; 
+    border-radius: 12px;
+    box-shadow: 0 0 10px 2px black;
+}
+
+.cb-slideshow li div { 
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    animation: titleAnimation 48s linear infinite 0s; 
+}
+
+.cb-slideshow li div h3 { 
+    font-family: 'Nothing You Could Do', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5rem;
+    padding: 0;
+    line-height: 200px; 
+}
+
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(../assets/images/slideshow/image-1.jpg);
+    animation-delay: 0s; 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(../assets/images/slideshow/image-2.jpg);
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(../assets/images/slideshow/image-3.jpg) ;
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url(../assets/images/slideshow/image-4.jpg) ;
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url(../assets/images/slideshow/image-5.jpg) ;
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url(../assets/images/slideshow/image-6.jpg) ;
+    animation-delay: 30s; 
+}
+.cb-slideshow li:nth-child(7) span { 
+    background-image: url(../assets/images/slideshow/image-7.jpg) ;
+    animation-delay: 36s; 
+}
+.cb-slideshow li:nth-child(8) span { 
+    background-image: url(../assets/images/slideshow/image-8.jpg) ;
+    animation-delay: 42s; 
+}
+
+
+.cb-slideshow li:nth-child(1) div { 
+    animation-delay: 0s; 
+}
+.cb-slideshow li:nth-child(2) div { 
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) div { 
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) div { 
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) div { 
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) div { 
+    animation-delay: 30s; 
+}
+.cb-slideshow li:nth-child(7) div { 
+    animation-delay: 36s; 
+}
+.cb-slideshow li:nth-child(8) div { 
+    animation-delay: 42s; 
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+        .cb-slideshow,
+        .cb-slideshow:after { 
+        position: relative;
+        width: 75%;
+        height: 30rem;
+    }
+
+    .cb-slideshow li div h3 { 
+        font-size: 2rem;
+    }
+}
+
